@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0f0c29;
+    padding: 1rem;
+
+}
+
+.Search{
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: #302b63;
+    outline: none;
+    color: wheat;
+}
+
+.Search::placeholder{
+    color: wheat;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie{
+    position: relative;
+    width: 300px;
+    height: 550px;
+    box-shadow: 0px 0px 10px burlywood;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 2rem;
+    background-color: rgb(13, 47, 110);
+}
+
+.movie:hover{
+    box-shadow: 0px 0px 100px burlywood;
+    font-size: 1.2rem;
+}
+
+.movie img{
+    max-width: 100%;
+    /* object-fit: cover;
+    height: 400px; */
+}
+
+.movie img:hover{
+    box-shadow: 10px 10px 100px;
+    
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    color: wheat;
+    font-family: 'Londrina Solid', cursive;
+    align-items: center;
+}
+
+
+.movie-info h3{
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.movie-info span{
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.movie-info span.green{
+    color:greenyellow;
+}
+
+.movie-info span.orange{
+    color: orange;
+}
+
+.movie-info span.red{
+    color: red;
+}
+
+.overview{
+    position: absolute;
+    overflow:hidden ;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #FFEEEE;  
+background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  
+background: linear-gradient(to right, #DDEFBB, #FFEEEE); 
+    padding: 1.5rem;
+    padding-top: 8.5rem;
+    letter-spacing: 1px;
+    transform: translateY(-101%);
+    transition: transform 1s ease-in-out;
+}
+
+.movie:hover .overview{
+    transform: translateY(-18%);
+    overflow: auto;
+}
